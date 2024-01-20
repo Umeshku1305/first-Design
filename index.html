@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-full h-screen bg-blue-500 text-black">
+        <div id="overlay" class="hidden transition-transform duration-[1500] ease-in-out absolute w-full h-screen bg-zinc-800/90 text-black">
+            <div class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] w-[50%] bg-zinc-200 p-4 rounded-md">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-2xl font-regular">Make New Notes.</h1>
+                    <i id="closebtn" class="ri-close-circle-fill"></i>
+                </div>
+                <div class="flex flex-col items-start gap-3 mt-2">
+                    <input id="title" class="bg-zinc-100 px-2 py-2 text-xl text-zinc-900 rounded-md w-full outline-none" type="text" placeholder="Title.">
+                    <textarea id="data" class="resize-none h-[30vh] bg-zinc-100 px-2 py-2 text-xl text-zinc-900 rounded-md w-full outline-none" placeholder="Data."></textarea>
+                    <button id="maketask" class="px-3 py-2 rounded-md bg-teal-600">Make</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav w-full px-10 py-10 flex justify-between items-center">
+            <h1>Remember.</h1>
+            <div class="flex gap-3">
+                <button id="makebtn" class="px-5 py-2 bg-teal-600 text-white text-xs rounded-md">Make New Notes +</button>
+            </div>
+        </div>
+        <div class="w-full min-h-[80vh] px-10 py-4">
+            <div class="cards flex gap-4 flex-wrap">
+                
+            </div>
+            <div class="vacant w-full min-h-[80vh] flex justify-center items-center">
+                <div class="w-[10vw] h-20 border-2 border-zinc-700 border-dashed rounded-lg flex items-center justify-center">
+                    <span class="text-xs text-white-500">No files here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
